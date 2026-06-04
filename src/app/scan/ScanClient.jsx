@@ -323,7 +323,7 @@ export default function ScanClient() {
                 <div className="w-full bg-gray-50 flex flex-col items-center justify-center p-4">
                   <img
                     src={result.annotated_image_path
-                      ? `${process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:8000'}${result.annotated_image_path}`
+                      ? `${(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api').replace(/\/api$/, '')}${result.annotated_image_path}`
                       : preview
                     }
                     alt="Hasil Deteksi"
