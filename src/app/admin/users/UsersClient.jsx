@@ -11,7 +11,7 @@ import { adminAPI } from '@/lib/adminAPI';
 import PaginationEllipsis from '@/components/PaginationEllipsis';
 import SweetAlert2 from 'sweetalert2/dist/sweetalert2.js';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 export default function AdminUsersClient() {
   const router = useRouter();
