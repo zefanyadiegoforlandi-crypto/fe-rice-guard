@@ -30,6 +30,10 @@ function DetailModal({ detection, onClose, onDelete, onRename, deleting }) {
     if (s === 'medium' || s === 'moderate') return 'text-amber-600 bg-amber-50';
     return 'text-emerald-600 bg-emerald-50';
   };
+  console.log("annotated_image_path:", detection.annotated_image_path)
+console.log("image_path:", detection.image_path)
+console.log("Full URL:", `${API_BASE}${detection.annotated_image_path}`)
+console.log("API_BASE:", API_BASE)
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4" onClick={onClose}>
