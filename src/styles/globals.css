@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mint: #CCDCDB;
+  --mint-soft: #A1D8B5;
+  --leaf: #4CB572;
+  --forest: #135E4B;
+  --charcoal: #1f2a28;
+  --muted: #5b6a65;
+}
+
+html, body {
+  background: var(--mint);
+  color: var(--charcoal);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  cursor: default;
+}
+
+/* Allow text selection in paragraphs, spans, and divs that aren't interactive */
+p, span, div, h1, h2, h3, h4, h5, h6, li, ul, ol {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* Allow selection in input fields and textareas */
+input, textarea {
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+.card-soft {
+  @apply bg-white rounded-2xl shadow-md border border-white/60;
+}
+
+.pill {
+  @apply rounded-full px-3 py-1 text-sm font-semibold;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-semibold transition hover:bg-[var(--mint-soft)] hover:text-[var(--forest)];
+}
+
+/* Hide scrollbar but keep scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Landing Page – Company Profile Styles
+   ═══════════════════════════════════════════════════════════ */
+
+/* Hero buttons */
+.hero-btn-primary {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm sm:text-base
+         bg-[var(--leaf)] text-white shadow-lg
+         hover:bg-[#3a9b5d] hover:shadow-xl
+         active:scale-[0.98] transition-all duration-300;
+}
+
+.hero-btn-outline {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm sm:text-base
+         border border-white/30 text-white
+         hover:bg-white/10 hover:border-white/50
+         active:scale-[0.98] transition-all duration-300;
+}
+
+/* Section typography */
+.section-badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full
+         text-[var(--forest)] text-sm font-semibold border;
+  background: rgba(161,216,181,0.4);
+  border-color: rgba(76,181,114,0.1);
+}
+
+.section-title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-[var(--forest)] leading-tight tracking-tight;
+}
+
+.section-desc {
+  @apply text-[var(--muted)] text-base sm:text-lg leading-relaxed max-w-2xl;
+}
+
+/* Fade-in on scroll animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar transparency for landing */
+.navbar-landing {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.navbar-landing.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Auth Pages – Login & Register
+   ═══════════════════════════════════════════════════════════ */
+
+.auth-brand-panel {
+  @apply relative w-[40%] max-w-[480px] flex-shrink-0 items-center justify-center overflow-hidden;
+  background: linear-gradient(160deg, #0a3d2e 0%, #135E4B 40%, #1a7a5c 100%);
+}
+
+.auth-input {
+  @apply w-full pr-4 py-2.5 border rounded-xl bg-white text-sm font-medium
+         placeholder-gray-400
+         focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-200;
+  padding-left: 2.75rem;
+  border-color: #e2e8f0;
+  --tw-ring-color: rgba(76, 181, 114, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.auth-input:focus {
+  border-color: var(--leaf);
+  box-shadow: 0 0 0 3px rgba(76, 181, 114, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.auth-input:hover:not(:focus) {
+  border-color: #cbd5e1;
+}
+
+.auth-btn-primary {
+  @apply w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-white text-sm tracking-wide
+         shadow-lg hover:shadow-xl
+         active:scale-[0.97] disabled:opacity-60 disabled:cursor-not-allowed
+         transition-all duration-300;
+  background: linear-gradient(135deg, var(--leaf) 0%, #3a9b5d 100%);
+}
+.auth-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #3a9b5d 0%, var(--forest) 100%);
+  transform: translateY(-1px);
+}
+.auth-btn-primary:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+}
+
+.auth-divider {
+  @apply flex items-center gap-4 text-xs font-medium text-gray-400 my-6;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
