@@ -11,8 +11,7 @@ import AppShell from '@/components/AppShell';
 import PaginationEllipsis from '@/components/PaginationEllipsis';
 import Swal from 'sweetalert2';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:8000';
-
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 /*  Detail Modal  */
 function DetailModal({ detection, onClose, onDelete, onRename, deleting }) {
   if (!detection) return null;
