@@ -10,7 +10,7 @@ import { formatToWIB, formatToWIBShort } from '@/lib/timeUtils';
 import SweetAlert2 from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 export default function GuestHistoryClient() {
   const router = useRouter();
