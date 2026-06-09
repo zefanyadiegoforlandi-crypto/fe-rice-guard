@@ -341,7 +341,7 @@ export default function HistoryClient() {
             <div className="px-5 py-4 border-b border-gray-100 space-y-3">
               <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 flex-1">
-                  <label className="space-y-1">
+                  {/* <label className="space-y-1">
                     <span className="block text-xs font-semibold text-[var(--muted)]">Filter penyakit</span>
                     <input
                       type="text"
@@ -353,7 +353,7 @@ export default function HistoryClient() {
                       placeholder="Cari Brown_Spot"
                       className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--leaf)]"
                     />
-                  </label>
+                  </label> */}
 
                   <label className="space-y-1">
                     <span className="block text-xs font-semibold text-[var(--muted)]">Urutkan</span>
