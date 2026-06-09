@@ -79,7 +79,7 @@ export default function RegisterClient() {
           <p className="text-white/60 text-sm leading-relaxed mb-8">
             Ribuan petani sudah menggunakan SekarPadi untuk melindungi tanaman padi mereka dari penyakit dan hama.
           </p>
-          <div className="grid grid-cols-3 gap-2.5 w-full">
+          {/* <div className="grid grid-cols-3 gap-2.5 w-full">
             {[
               { val: '1K+', label: 'Pengguna' },
               { val: '50K+', label: 'Scan' },
@@ -90,7 +90,7 @@ export default function RegisterClient() {
                 <div className="text-white/50 text-[11px] font-medium">{s.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

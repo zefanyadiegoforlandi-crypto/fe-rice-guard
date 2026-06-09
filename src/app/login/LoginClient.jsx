@@ -59,7 +59,7 @@ export default function LoginClient() {
             {[
               { icon: 'fa-bolt', text: 'Deteksi instan dengan AI' },
               { icon: 'fa-shield-halved', text: 'Data aman & terenkripsi' },
-              { icon: 'fa-chart-line', text: 'Dashboard analitik lengkap' },
+              // { icon: 'fa-chart-line', text: 'Dashboard analitik lengkap' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
                 <div className="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center flex-shrink-0">
