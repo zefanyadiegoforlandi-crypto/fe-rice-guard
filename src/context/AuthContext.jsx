@@ -52,15 +52,15 @@ export function AuthProvider({ children }) {
     setLoading(true);
     try {
       const { data } = await authAPI.register({ email, name, password });
-      authUtils.setToken(data.access_token);
-      authUtils.setUser(data.user);
-      setIsLoggedIn(true);
-      setUser(data.user);
+      // authUtils.setToken(data.access_token);
+      // authUtils.setUser(data.user);
+      // setIsLoggedIn(true);
+      // setUser(data.user);
       
       // Redirect berdasarkan role (default user role untuk register)
-      const redirectPath = data.user.role === 'admin' ? '/admin' : '/dashboard';
-      router.push(redirectPath);
-      notifySuccess(`Akun berhasil dibuat. Selamat datang, ${data.user.name}!`);
+      // const redirectPath = data.user.role === 'admin' ? '/admin' : '/dashboard';
+      notifySuccess('Akun berhasil dibuat. Silakan masuk.');
+      router.push('/login');
       return { success: true };
     } catch (error) {
       const message =
