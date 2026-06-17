@@ -523,7 +523,6 @@ export default function LandingContent() {
               </p>
             </div>
 
-            Platform
             <div>
               <h4 className="font-semibold text-white/80 mb-4 text-sm uppercase tracking-wider">Platform</h4>
               <ul className="space-y-3">
